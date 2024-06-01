@@ -10,7 +10,8 @@ public class BinarySearch {
         System.out.println("Enter the target element");
 
         int target = input.nextInt();
-        System.out.println(BinarySearch(arr, 0, 9, target));
+//        System.out.println(BinarySearch(arr, 0, 9, target));
+        System.out.println(ItrBinarySearch(arr, target));
     }
 
     // ***Code for only Ascending order, for descending order, the logic will reverse *** //
@@ -26,6 +27,24 @@ public class BinarySearch {
         } else if (start > end) {
             System.out.println("Element not found");
             return -1;
+        }
+        return -1;
+  }
+
+  // *** Iterative approach is better because it reduces function-call overhead. Recursion tends to create a stack frame for each step which consumes additional memory.
+  static int ItrBinarySearch(int array[], int t) {
+        int start = 0;
+        int end = array.length - 1;
+        while (start <= end){
+            int mid = start + ((end - start)/2);
+            if (array[mid] < t) {
+                start = mid+1;
+            } else if (array[mid] > t) {
+                end = mid - 1;
+            }
+            else {
+                return mid;
+            }
         }
         return -1;
   }
