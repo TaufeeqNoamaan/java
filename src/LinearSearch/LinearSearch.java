@@ -1,7 +1,8 @@
-package learning;
+package LinearSearch;
 import java.util.Scanner;
 public class LinearSearch {
     public static void main(String[] args) {
+        //  Time complexity: O(n)
         int[] arr = {1,2,3,4,5,6,7,8};
         Scanner input = new Scanner(System.in);
         System.out.println("Enter target element");

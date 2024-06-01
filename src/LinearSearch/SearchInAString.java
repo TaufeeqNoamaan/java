@@ -1,4 +1,4 @@
-package learning;
+package LinearSearch;
 
 public class SearchInAString {
     public static void main(String[] args) {
